@@ -1,3 +1,7 @@
+## 🤔 Descripción del problema a resolver
+
+## 💡 Proceso seguido para resolver el problema.
+
 ## 📝 Pruebas de validación
 
 ## 👩‍💻 Resumen de los cambios introducidos
