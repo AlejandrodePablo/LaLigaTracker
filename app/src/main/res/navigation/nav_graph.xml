@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/clubs">
+
+    <fragment
+        android:id="@+id/clubs"
+        android:name="edu.iesam.laligatracker.features.clubs.presentation.clubs.ClubsFragment"
+        android:label="@string/clubes"
+        tools:layout="@layout/fragment_clubs">
+
+        <action
+            android:id="@+id/action_from_clubs_to_players"
+            app:destination="@+id/players" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/market_value"
+        android:name="edu.iesam.laligatracker.features.clubs.presentation.market.MarketValueFragment"
+        android:label="@string/valor_mercado"
+        tools:layout="@layout/fragment_market_value" />
+
+    <fragment
+        android:id="@+id/players"
+        android:name="edu.iesam.laligatracker.features.clubs.presentation.clubs.detail.PlayersListFragment"
+        android:label="@string/jugadores"
+        tools:layout="@layout/fragment_players_list" />
+
+</navigation>
