@@ -14,7 +14,7 @@
         android:id="@+id/clubs_list"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:paddingBottom="@dimen/bottom_menu_height"
+        android:paddingBottom="@dimen/bottom_club_list_padding"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/clubs_toolbar"

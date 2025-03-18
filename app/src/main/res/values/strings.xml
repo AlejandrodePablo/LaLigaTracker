@@ -3,4 +3,5 @@
     <string name="clubes">Clubes</string>
     <string name="valor_mercado">Valor de Mercado</string>
     <string name="jugadores">Jugadores</string>
+    <string name="club_name">Club Name</string>
 </resources>

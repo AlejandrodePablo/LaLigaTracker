@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="padding">16dp</dimen>
-    <dimen name="bottom_menu_height">56dp</dimen>
+    <dimen name="bottom_club_list_padding">56dp</dimen>
+    <dimen name="club_name_size">20sp</dimen>
 </resources>
