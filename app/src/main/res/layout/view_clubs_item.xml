@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="@dimen/padding">
+    android:padding="@dimen/usual_padding">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:cardBackgroundColor="@color/black"
-        app:cardCornerRadius="@dimen/padding"
+        app:cardCornerRadius="@dimen/usual_padding"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -19,7 +19,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:padding="@dimen/padding">
+            android:padding="@dimen/usual_padding">
 
             <ImageView
                 android:id="@+id/club_image"
@@ -32,7 +32,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
-                android:padding="@dimen/padding"
+                android:padding="@dimen/usual_padding"
                 android:textColor="@color/white"
                 android:textSize="@dimen/club_name_size"
                 tools:text="@string/club_name" />
