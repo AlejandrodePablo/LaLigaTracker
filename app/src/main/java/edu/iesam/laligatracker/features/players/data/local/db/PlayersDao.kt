@@ -9,8 +9,11 @@ import androidx.room.Query
 interface PlayersDao {
 
     @Query("SELECT * FROM $PLAYERS_TABLE")
-    suspend fun findAllPlayers(): List<PlayersEntity>
+    suspend fun findAllPlayers(): List<PlayerWithStats>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun saveAllPlayers(vararg playersEntity: PlayersEntity)
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun saveAllStats(vararg statsEntity: StatsEntity)
 }

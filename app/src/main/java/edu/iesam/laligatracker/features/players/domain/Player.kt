@@ -5,5 +5,12 @@ data class Player(
     val name: String,
     val image: String,
     val number: String,
-    val amountGoals: String
+    val stats: Stats
+)
+
+data class Stats(
+    val id: String,
+    val competitionId: String,
+    val amountGoals: String,
+    val amountAssists: String
 )
