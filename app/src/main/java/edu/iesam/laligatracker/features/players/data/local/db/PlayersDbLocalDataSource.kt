@@ -1,7 +1,9 @@
 package edu.iesam.laligatracker.features.players.data.local.db
 
 import edu.iesam.laligatracker.features.players.domain.Player
+import org.koin.core.annotation.Single
 
+@Single
 class PlayersDbLocalDataSource(private val playersDao: PlayersDao) {
 
     suspend fun findAllPlayers(): List<Player> {
@@ -10,9 +12,11 @@ class PlayersDbLocalDataSource(private val playersDao: PlayersDao) {
             emptyList()
         } else {
             players.map { playersWithStats ->
-                val player = playersWithStats.player.toDomain()
-                val stats = playersWithStats.stats.map { it.toDomain() }
-                player.copy(stats = stats.firstOrNull() ?: player.stats)
+                val player =
+                    playersWithStats.player.toDomain(
+                        playersWithStats.stats.firstOrNull()?.toDomain() ?: error("stats not found")
+                    )
+                player
             }
         }
     }
