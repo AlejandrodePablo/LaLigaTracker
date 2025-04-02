@@ -7,7 +7,7 @@ import retrofit2.http.Path
 
 interface PlayerService {
 
-    @GET("club/{club_id}/players")
+    @GET("clubs/{club_id}/players")
     suspend fun requestPlayers(@Path("club_id") clubId: String): Response<PlayerInfoApiModel>
 
     @GET("players/{player_id}/profile")

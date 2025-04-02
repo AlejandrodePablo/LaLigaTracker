@@ -4,7 +4,13 @@ import edu.iesam.laligatracker.features.players.domain.Player
 import edu.iesam.laligatracker.features.players.domain.Stats
 
 fun PlayerApiModel.toModel(stats: Stats): Player {
-    return Player(this.id, this.name, this.image, this.number, stats)
+    return Player(
+        this.id,
+        this.name,
+        this.image,
+        this.number,
+        stats = stats
+    )
 }
 
 fun StatsApiModel.toModel(): Stats {

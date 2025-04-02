@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
+import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
 import edu.iesam.laligatracker.R
 import edu.iesam.laligatracker.databinding.FragmentPlayersListBinding
@@ -20,6 +21,8 @@ class PlayersListFragment : Fragment() {
     private val playerAdapter = PlayerAdapter()
 
     private val viewModel: PlayersViewModel by viewModel()
+
+    private val clubArgs: PlayersListFragmentArgs by navArgs()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -43,7 +46,7 @@ class PlayersListFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setupObserver()
-        viewModel.fetchPlayers()
+        viewModel.fetchPlayers(clubArgs.clubId)
     }
 
     private fun setupObserver() {

@@ -1,6 +1,7 @@
 package edu.iesam.laligatracker.features.clubs.presentation.clubs
 
 import android.view.View
+import androidx.navigation.Navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import edu.iesam.laligatracker.app.extensions.loadUrl
 import edu.iesam.laligatracker.databinding.ViewClubsItemBinding
@@ -15,6 +16,15 @@ class ClubsViewHolder(private val view: View) : RecyclerView.ViewHolder(view) {
         binding.apply {
             clubName.text = club.name
             clubImage.loadUrl(club.image)
+            clubItem.setOnClickListener{
+                navigateToDetail(club.id)
+            }
         }
+    }
+
+    private fun navigateToDetail(clubId: String){
+        findNavController(view).navigate(
+            ClubsFragmentDirections.actionFromClubsToPlayers(clubId = clubId)
+        )
     }
 }

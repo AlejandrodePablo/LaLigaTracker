@@ -11,15 +11,16 @@ import kotlinx.coroutines.launch
 import org.koin.android.annotation.KoinViewModel
 
 @KoinViewModel
-class PlayersViewModel(private val getPlayers: GetPlayersUseCase, private val clubId: String) :
+class PlayersViewModel(private val getPlayers: GetPlayersUseCase) :
     ViewModel() {
 
     private val _uiState = MutableLiveData<UiState>()
     val uiState: LiveData<UiState> get() = _uiState
 
-    fun fetchPlayers() {
+    fun fetchPlayers(clubId: String) {
         _uiState.value = UiState(isLoading = true)
         viewModelScope.launch(Dispatchers.IO) {
+
             val players = getPlayers.invoke(clubId)
             _uiState.postValue(
                 UiState(
