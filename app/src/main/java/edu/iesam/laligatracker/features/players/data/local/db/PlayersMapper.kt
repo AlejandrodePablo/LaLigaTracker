@@ -7,7 +7,7 @@ fun Player.toEntity(): PlayersEntity = PlayersEntity(
     this.id,
     this.name,
     this.image,
-    this.number
+    this.number?: "0"
 )
 
 fun PlayersEntity.toDomain(stats: Stats): Player = Player(
@@ -21,8 +21,8 @@ fun PlayersEntity.toDomain(stats: Stats): Player = Player(
 fun Stats.toEntity(playerId: String): StatsEntity = StatsEntity(
     this.id,
     this.competitionId,
-    this.amountGoals,
-    this.amountAssists,
+    this.amountGoals ?: "0",
+    this.amountAssists ?: "0",
     playerId = playerId
 )
 

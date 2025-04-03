@@ -7,6 +7,7 @@ import org.koin.core.annotation.Module
 import org.koin.core.annotation.Single
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import java.util.concurrent.TimeUnit
 
 @Module
 @ComponentScan
@@ -24,6 +25,9 @@ class RemoteModule {
         val okHttpClient = OkHttpClient
             .Builder()
             .addInterceptor(loggingInterceptor)
+            .connectTimeout(300, TimeUnit.SECONDS) // Tiempo de espera para la conexión
+            .readTimeout(300, TimeUnit.SECONDS)    // Tiempo de espera para la lectura
+            .writeTimeout(300, TimeUnit.SECONDS)   // Tiempo de espera para la escritura
             .build()
         return okHttpClient
     }

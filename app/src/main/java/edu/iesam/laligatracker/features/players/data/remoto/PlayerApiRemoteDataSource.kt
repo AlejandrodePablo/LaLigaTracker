@@ -12,10 +12,12 @@ class PlayerApiRemoteDataSource(private val playerService: PlayerService) {
             val playerList = response.body()?.players ?: emptyList()
             playerList.mapNotNull { playerApiModel ->
                 val statsResponse = playerService.getPlayerStats(playerApiModel.id)
-                if (statsResponse.isSuccessful) {
+                val playerInfoResponse = playerService.getPlayerInfo(playerApiModel.id)
+                if (statsResponse.isSuccessful && playerInfoResponse.isSuccessful) {
                     val statsApiModel = statsResponse.body()
+                    val playerInfoApiModel = playerInfoResponse.body()
                     statsApiModel?.let {
-                        playerApiModel.toModel(it.toModel())
+                        playerApiModel.toModel(it.toModel(), playerInfoApiModel?.image ?:"", playerInfoApiModel?.number?:"")
                     }
                 } else {
                     null
@@ -23,26 +25,6 @@ class PlayerApiRemoteDataSource(private val playerService: PlayerService) {
             }
         } else {
             emptyList()
-        }
-    }
-
-    suspend fun getPlayer(playerId: String): Player? {
-        val playerResponse = playerService.getPlayerInfo(playerId)
-        return if (playerResponse.isSuccessful) {
-            val playerApiModel = playerResponse.body()
-            val statsResponse = playerService.getPlayerStats(playerId)
-            if (statsResponse.isSuccessful) {
-                val statsApiModel = statsResponse.body()
-                if (playerApiModel != null && statsApiModel != null) {
-                    playerApiModel.toModel(statsApiModel.toModel())
-                } else {
-                    null
-                }
-            } else {
-                null
-            }
-        } else {
-            null
         }
     }
 }

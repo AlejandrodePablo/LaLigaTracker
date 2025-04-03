@@ -6,7 +6,7 @@ data class PlayerApiModel(
     @SerializedName("id") val id: String,
     @SerializedName("name") val name: String,
     @SerializedName("imageUrl") val image: String,
-    @SerializedName("shirtNumber") val number: String,
+    @SerializedName("shirtNumber") val number: String?,
 )
 
 data class PlayerInfoApiModel(
@@ -17,6 +17,6 @@ data class PlayerInfoApiModel(
 data class StatsApiModel(
     @SerializedName("id") val id: String,
     @SerializedName("competitionId") val competitionId: String,
-    @SerializedName("amountGoals") val amountGoals: String,
-    @SerializedName("amountAssists") val amountAssists: String,
+    @SerializedName("goals") val amountGoals: String?,
+    @SerializedName("assists") val amountAssists: String?,
 )

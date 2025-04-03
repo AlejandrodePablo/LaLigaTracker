@@ -14,6 +14,7 @@ class PlayerViewHolder(private val view: View) : RecyclerView.ViewHolder(view) {
         binding.apply {
             playerName.text = player.name
             playerImage.loadUrl(player.image)
+            numberId.text = player.number
         }
     }
 }
