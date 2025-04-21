@@ -16,7 +16,8 @@ class PlayersEntity(
     @PrimaryKey @ColumnInfo(name = PLAYER_ID) val id: String,
     @ColumnInfo(name = "name") val name: String,
     @ColumnInfo(name = "image") val image: String,
-    @ColumnInfo(name = "number") val number: String
+    @ColumnInfo(name = "number") val number: String,
+    @ColumnInfo(name = "club_id") val clubId: String
 )
 
 @Entity(tableName = STATS_TABLE)

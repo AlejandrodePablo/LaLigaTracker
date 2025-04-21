@@ -10,8 +10,8 @@ import androidx.room.Transaction
 interface PlayersDao {
 
     @Transaction
-    @Query("SELECT * FROM $PLAYERS_TABLE")
-    suspend fun findAllPlayers(): List<PlayerWithStats>
+    @Query("SELECT * FROM $PLAYERS_TABLE WHERE club_id = :clubId")
+    suspend fun findAllPlayers(clubId: String): List<PlayerWithStats>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun saveAllPlayers(vararg playersEntity: PlayersEntity)

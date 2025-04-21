@@ -6,8 +6,8 @@ import org.koin.core.annotation.Single
 @Single
 class PlayersDbLocalDataSource(private val playersDao: PlayersDao) {
 
-    suspend fun findAllPlayers(): List<Player> {
-        val players = playersDao.findAllPlayers()
+    suspend fun findAllPlayers(clubId: String): List<Player> {
+        val players = playersDao.findAllPlayers(clubId)
         return if (players.isEmpty()) {
             emptyList()
         } else {
@@ -21,8 +21,8 @@ class PlayersDbLocalDataSource(private val playersDao: PlayersDao) {
         }
     }
 
-    suspend fun saveAllPlayers(players: List<Player>) {
-        val playerEntities = players.map { it.toEntity() }
+    suspend fun saveAllPlayers(players: List<Player>, clubId: String) {
+        val playerEntities = players.map { it.toEntity(clubId) }
         val statsEntities = players.flatMap {
             it.stats.let { listOf(it.toEntity(it.id)) }
         }

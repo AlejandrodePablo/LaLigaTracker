@@ -3,11 +3,12 @@ package edu.iesam.laligatracker.features.players.data.local.db
 import edu.iesam.laligatracker.features.players.domain.Player
 import edu.iesam.laligatracker.features.players.domain.Stats
 
-fun Player.toEntity(): PlayersEntity = PlayersEntity(
+fun Player.toEntity(clubId: String): PlayersEntity = PlayersEntity(
     this.id,
     this.name,
     this.image,
-    this.number?: "0"
+    this.number?: "0",
+    clubId
 )
 
 fun PlayersEntity.toDomain(stats: Stats): Player = Player(
