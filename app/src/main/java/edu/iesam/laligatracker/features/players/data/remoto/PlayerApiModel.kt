@@ -17,6 +17,6 @@ data class PlayerInfoApiModel(
 data class StatsApiModel(
     @SerializedName("id") val id: String,
     @SerializedName("competitionId") val competitionId: String,
-    @SerializedName("goals") val amountGoals: String?,
+    @SerializedName("goals") val amountGoals: Int?,
     @SerializedName("assists") val amountAssists: String?,
 )

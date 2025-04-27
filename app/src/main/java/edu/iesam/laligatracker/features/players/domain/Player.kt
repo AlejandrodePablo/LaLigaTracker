@@ -11,6 +11,6 @@ data class Player(
 data class Stats(
     val id: String,
     val competitionId: String,
-    val amountGoals: String?,
+    val amountGoals: Int?,
     val amountAssists: String?
 )

@@ -1,5 +1,6 @@
 package edu.iesam.laligatracker.features.players.data.remoto
 
+import android.util.Log
 import edu.iesam.laligatracker.features.players.domain.Player
 import edu.iesam.laligatracker.features.players.domain.Stats
 
@@ -14,5 +15,10 @@ fun PlayerApiModel.toModel(stats: Stats, imageUrl: String, number: String): Play
 }
 
 fun StatsApiModel.toModel(): Stats {
-    return Stats(this.id, "ES1", this.amountGoals ?: "0", this.amountAssists ?: "0")
+    Log.d("@dev", "Mapping StatsApiModel to Stats: amountGoals=${this.amountGoals}")
+    return Stats(
+        this.id,
+        "ES1",
+        this.amountGoals,
+        this.amountAssists)
 }
