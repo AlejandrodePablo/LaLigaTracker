@@ -1,6 +1,5 @@
-package edu.iesam.laligatracker.features.players.data.remoto
+package edu.iesam.laligatracker.features.players.data.remote
 
-import org.koin.core.annotation.Single
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Path

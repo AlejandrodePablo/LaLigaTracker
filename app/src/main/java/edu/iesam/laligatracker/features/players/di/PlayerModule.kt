@@ -2,7 +2,7 @@ package edu.iesam.laligatracker.features.players.di
 
 import edu.iesam.laligatracker.app.data.local.db.LaLigaTrackerDataBase
 import edu.iesam.laligatracker.features.players.data.local.db.PlayersDao
-import edu.iesam.laligatracker.features.players.data.remoto.PlayerService
+import edu.iesam.laligatracker.features.players.data.remote.PlayerService
 import org.koin.core.annotation.ComponentScan
 import org.koin.core.annotation.Module
 import org.koin.core.annotation.Single

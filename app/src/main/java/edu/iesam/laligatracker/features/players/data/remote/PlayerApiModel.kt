@@ -1,4 +1,4 @@
-package edu.iesam.laligatracker.features.players.data.remoto
+package edu.iesam.laligatracker.features.players.data.remote
 
 import com.google.gson.annotations.SerializedName
 

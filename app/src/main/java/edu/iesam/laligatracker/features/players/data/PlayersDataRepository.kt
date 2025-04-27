@@ -1,7 +1,7 @@
 package edu.iesam.laligatracker.features.players.data
 
 import edu.iesam.laligatracker.features.players.data.local.db.PlayersDbLocalDataSource
-import edu.iesam.laligatracker.features.players.data.remoto.PlayerApiRemoteDataSource
+import edu.iesam.laligatracker.features.players.data.remote.PlayerApiRemoteDataSource
 import edu.iesam.laligatracker.features.players.domain.Player
 import edu.iesam.laligatracker.features.players.domain.PlayersRepository
 import org.koin.core.annotation.Single
