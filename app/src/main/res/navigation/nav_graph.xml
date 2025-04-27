@@ -24,8 +24,11 @@
 
     <fragment
         android:id="@+id/players"
-        android:name="edu.iesam.laligatracker.features.clubs.presentation.clubs.detail.PlayersListFragment"
+        android:name="edu.iesam.laligatracker.features.players.presentation.PlayersListFragment"
         android:label="@string/jugadores"
-        tools:layout="@layout/fragment_players_list" />
+        tools:layout="@layout/fragment_players_list">
+        <argument android:name="club_id"
+            app:argType="string"/>
+    </fragment>
 
 </navigation>
