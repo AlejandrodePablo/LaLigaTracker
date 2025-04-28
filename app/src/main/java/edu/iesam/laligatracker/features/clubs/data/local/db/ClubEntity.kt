@@ -11,5 +11,7 @@ const val CLUB_ID = "club_id"
 class ClubEntity(
     @PrimaryKey @ColumnInfo(name = CLUB_ID) val id: String,
     @ColumnInfo(name = "name") val name: String,
-    @ColumnInfo(name = "image") val image: String
+    @ColumnInfo(name = "image") val image: String,
+    @ColumnInfo(name = "market_value") val marketValue: Int,
+    @ColumnInfo(name = "stadium_seats") val stadiumSeats: Int
 )

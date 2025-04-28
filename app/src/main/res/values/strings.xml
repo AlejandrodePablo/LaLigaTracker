@@ -4,4 +4,7 @@
     <string name="valor_mercado">Valor de Mercado</string>
     <string name="jugadores">Jugadores</string>
     <string name="club_name">Club Name</string>
+    <string name="club_value">Club Value</string>
+    <string name="player_number">#1</string>
+    <string name="euros">€</string>
 </resources>

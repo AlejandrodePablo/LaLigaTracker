@@ -11,7 +11,7 @@ import edu.iesam.laligatracker.features.players.data.local.db.StatsEntity
 
 @Database(
     entities = [ClubEntity::class, PlayersEntity::class, StatsEntity::class],
-    version = 3,
+    version = 5,
     exportSchema = false
 )
 abstract class LaLigaTrackerDataBase : RoomDatabase() {

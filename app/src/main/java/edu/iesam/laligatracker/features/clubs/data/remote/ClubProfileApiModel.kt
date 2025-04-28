@@ -10,5 +10,7 @@ data class ClubListApiModel(
 data class ClubProfileApiModel(
     @SerializedName("id") val id: String,
     @SerializedName("name") val name: String,
-    @SerializedName("image") val image: String
+    @SerializedName("image") val image: String,
+    @SerializedName("currentMarketValue") val marketValue: Int,
+    @SerializedName("stadiumSeats") val stadiumSeats: Int
 )
