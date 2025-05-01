@@ -21,4 +21,20 @@ class ClubDataRepository(
         }
         return clubsLocal
     }
+
+    override suspend fun getFavoriteClubs(): List<Club> {
+        return local.getFavoriteClubs()
+    }
+
+    override suspend fun saveFavoriteClub(club: Club) {
+        local.saveFavorite(club)
+    }
+
+    override suspend fun deleteFavoriteClub(club: Club) {
+        local.deleteFavorite(club)
+    }
+
+    override suspend fun toggleFavoriteClub(club: Club) {
+        local.toggleFavorite(club)
+    }
 }

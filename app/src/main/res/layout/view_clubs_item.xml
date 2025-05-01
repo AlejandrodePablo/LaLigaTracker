@@ -37,6 +37,15 @@
                 android:textColor="@color/white"
                 android:textSize="@dimen/club_name_size"
                 tools:text="@string/club_name" />
+
+            <ImageView
+                android:id="@+id/fav_btn"
+                android:layout_width="@dimen/favorite_btn_size"
+                android:layout_height="@dimen/favorite_btn_size"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="@dimen/usual_padding"
+                android:src="@drawable/ic_favorite_outlined"
+                app:tint="@color/white"/>
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
