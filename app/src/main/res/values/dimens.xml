@@ -5,4 +5,5 @@
     <dimen name="club_name_size">20sp</dimen>
     <dimen name="number_size">60dp</dimen>
     <dimen name="number_font_size">30sp</dimen>
+    <dimen name="favorite_btn_size">50dp</dimen>
 </resources>
