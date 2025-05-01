@@ -13,4 +13,7 @@ interface ClubsDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun saveAllClubs(vararg clubEntity: ClubEntity)
+
+    @Query("SELECT * FROM $CLUBS_TABLE WHERE club_id = :clubId LIMIT 1")
+    suspend fun findById(clubId: String): ClubEntity?
 }

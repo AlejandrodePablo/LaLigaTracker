@@ -5,9 +5,8 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.ListAdapter
 import edu.iesam.laligatracker.R
 import edu.iesam.laligatracker.features.clubs.domain.Club
-import edu.iesam.laligatracker.features.clubs.presentation.clubs.ClubsDiffUtil
 
-class MarketValueAdapter : ListAdapter<Club, MarketValueViewHolder>(ClubsDiffUtil()) {
+class MarketValueAdapter : ListAdapter<Club, MarketValueViewHolder>(MarketValueDiffUtil()) {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MarketValueViewHolder {
         val view =
             LayoutInflater.from(parent.context)

@@ -2,13 +2,20 @@ package edu.iesam.laligatracker.features.clubs.presentation.clubs
 
 import androidx.recyclerview.widget.DiffUtil
 import edu.iesam.laligatracker.features.clubs.domain.Club
+import edu.iesam.laligatracker.features.clubs.domain.GetClubsUseCase
 
-class ClubsDiffUtil : DiffUtil.ItemCallback<Club>() {
-    override fun areItemsTheSame(oldItem: Club, newItem: Club): Boolean {
-        return oldItem.id == newItem.id
+class ClubsDiffUtil : DiffUtil.ItemCallback<GetClubsUseCase.ClubFeed>() {
+    override fun areItemsTheSame(
+        oldItem: GetClubsUseCase.ClubFeed,
+        newItem: GetClubsUseCase.ClubFeed,
+    ): Boolean {
+        return oldItem.club.id == newItem.club.id
     }
 
-    override fun areContentsTheSame(oldItem: Club, newItem: Club): Boolean {
+    override fun areContentsTheSame(
+        oldItem: GetClubsUseCase.ClubFeed,
+        newItem: GetClubsUseCase.ClubFeed,
+    ): Boolean {
         return oldItem == newItem
     }
 }

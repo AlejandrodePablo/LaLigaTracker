@@ -2,6 +2,7 @@ package edu.iesam.laligatracker.features.clubs.di
 
 import edu.iesam.laligatracker.app.data.local.db.LaLigaTrackerDataBase
 import edu.iesam.laligatracker.features.clubs.data.local.db.ClubsDao
+import edu.iesam.laligatracker.features.clubs.data.local.db.FavoriteDao
 import edu.iesam.laligatracker.features.clubs.data.remote.ClubService
 import org.koin.core.annotation.ComponentScan
 import org.koin.core.annotation.Module
@@ -18,5 +19,10 @@ class ClubModule {
     @Single
     fun provideClubsDao(db: LaLigaTrackerDataBase): ClubsDao {
         return db.clubsDao()
+    }
+
+    @Single
+    fun provideFavoriteDao(db: LaLigaTrackerDataBase): FavoriteDao {
+        return db.favoriteDao()
     }
 }
