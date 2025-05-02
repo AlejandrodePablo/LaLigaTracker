@@ -8,10 +8,9 @@
     android:padding="@dimen/usual_padding">
 
     <androidx.cardview.widget.CardView
+        style="@style/cardViewsStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:cardBackgroundColor="@color/black"
-        app:cardCornerRadius="@dimen/usual_padding"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -21,32 +20,33 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:padding="@dimen/usual_padding">
+
             <ImageView
                 android:id="@+id/fav_btn"
+                style="@style/favButtonColor"
                 android:layout_width="@dimen/favorite_btn_size"
                 android:layout_height="@dimen/favorite_btn_size"
                 android:layout_gravity="end"
                 android:layout_marginEnd="@dimen/usual_padding"
-                android:src="@drawable/ic_favorite_outlined"
-                app:tint="@color/white"/>
+                android:src="@drawable/ic_favorite_outlined" />
 
             <ImageView
                 android:id="@+id/club_image"
                 android:layout_width="@dimen/img_size"
                 android:layout_height="@dimen/img_size"
-                tools:src="@tools:sample/avatars"
-                android:layout_gravity="center"/>
+                android:layout_gravity="center"
+                tools:src="@tools:sample/avatars" />
 
             <TextView
                 android:id="@+id/club_name"
+                style="@style/textColor"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:gravity="center_horizontal"
                 android:padding="@dimen/usual_padding"
-                android:textColor="@color/white"
                 android:textSize="@dimen/club_name_size"
-                tools:text="@string/club_name"
-                android:layout_gravity="center"/>
+                tools:text="@string/club_name" />
 
 
         </LinearLayout>

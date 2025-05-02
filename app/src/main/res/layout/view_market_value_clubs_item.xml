@@ -8,10 +8,9 @@
     android:padding="@dimen/usual_padding">
 
     <androidx.cardview.widget.CardView
+        style="@style/cardViewsStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:cardBackgroundColor="@color/black"
-        app:cardCornerRadius="@dimen/usual_padding"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -24,8 +23,8 @@
 
             <ImageView
                 android:id="@+id/club_image"
-                android:layout_width="85dp"
-                android:layout_height="85dp"
+                android:layout_width="@dimen/market_value_img_size"
+                android:layout_height="@dimen/market_value_img_size"
                 android:layout_gravity="center_vertical"
                 tools:src="@tools:sample/avatars" />
 
@@ -36,12 +35,12 @@
 
                 <TextView
                     android:id="@+id/club_name"
-                    android:layout_width="235dp"
-                    android:layout_height="40dp"
+                    style="@style/textColor"
+                    android:layout_width="@dimen/market_value_club_name_width"
+                    android:layout_height="@dimen/market_value_club_name_height"
                     android:layout_marginStart="@dimen/usual_padding"
                     android:layout_marginTop="@dimen/usual_padding"
                     android:gravity="start"
-                    android:textColor="@color/white"
                     android:textSize="@dimen/club_name_size_mv"
                     tools:text="@string/club_name" />
 
@@ -52,21 +51,21 @@
 
                     <TextView
                         android:id="@+id/club_value"
+                        style="@style/textColor"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginVertical="@dimen/usual_padding"
                         android:layout_marginStart="@dimen/usual_padding"
-                        android:textColor="@color/white"
                         android:textSize="@dimen/club_name_size_mv"
                         tools:text="@string/club_value" />
 
                     <TextView
+                        style="@style/textColor"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:gravity="center_horizontal"
                         android:layout_marginVertical="@dimen/usual_padding"
+                        android:gravity="center_horizontal"
                         android:text="@string/euros"
-                        android:textColor="@color/white"
                         android:textSize="@dimen/club_name_size" />
 
                 </LinearLayout>

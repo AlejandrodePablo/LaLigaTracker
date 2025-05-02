@@ -7,14 +7,16 @@
 
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/toolbar"
+        style="@style/toolbarStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:minHeight="?attr/actionBarSize"
         app:titleCentered="true"
-        tools:title="Titulo toolbar">
+        tools:title="@string/toolbar_title">
 
         <ImageView
             android:id="@+id/img_toolbar"
+            style="@style/favButtonColor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="end"
