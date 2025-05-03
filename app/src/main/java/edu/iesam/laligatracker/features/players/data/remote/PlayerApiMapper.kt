@@ -15,7 +15,6 @@ fun PlayerApiModel.toModel(stats: Stats, imageUrl: String, number: String): Play
 }
 
 fun StatsApiModel.toModel(): Stats {
-    Log.d("@dev", "Mapping StatsApiModel to Stats: amountGoals=${this.amountGoals}")
     return Stats(
         this.id,
         "ES1",
