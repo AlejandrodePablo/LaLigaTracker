@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="cardViewsStyle">
+        <item name="cardBackgroundColor">@color/md_theme_onPrimaryContainer</item>
+        <item name="cardCornerRadius">@dimen/card_corner_radius</item>
+    </style>
+
+    <style name="favButtonColor">
+        <item name="android:tint">@color/md_theme_error</item>
+    </style>
+
+    <style name="textColor">
+        <item name="android:textColor">@color/md_theme_onPrimary</item>
+    </style>
+
+    <style name="roundedImages">
+        <item name="cardCornerRadius">@dimen/rounded_images_radius</item>
+        <item name="strokeColor">@color/md_theme_onPrimaryContainer</item>
+    </style>
+
+    <style name="toolbarStyle">
+        <item name="android:background">@color/md_theme_onPrimaryContainer</item>
+        <item name="titleTextColor">@color/md_theme_onPrimary</item>
+    </style>
+</resources>

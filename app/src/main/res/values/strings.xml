@@ -7,4 +7,7 @@
     <string name="club_value">Club Value</string>
     <string name="player_number">#1</string>
     <string name="euros">€</string>
+    <string name="toolbar_title">Titulo toolbar</string>
+    <string name="goals">Goals</string>
+    <string name="assists">Assists</string>
 </resources>

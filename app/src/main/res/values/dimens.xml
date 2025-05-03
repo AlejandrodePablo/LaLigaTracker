@@ -2,8 +2,20 @@
 <resources>
     <dimen name="usual_padding">16dp</dimen>
     <dimen name="bottom_club_list_padding">56dp</dimen>
-    <dimen name="club_name_size">20sp</dimen>
+    <dimen name="club_name_size">30sp</dimen>
+    <dimen name="club_name_size_mv">27sp</dimen>
+    <dimen name="img_size">150dp</dimen>
     <dimen name="number_size">60dp</dimen>
-    <dimen name="number_font_size">30sp</dimen>
+    <dimen name="number_font_size">25sp</dimen>
     <dimen name="favorite_btn_size">50dp</dimen>
+    <dimen name="rounded_images_size">100dp</dimen>
+    <dimen name="rounded_images_radius">25dp</dimen>
+    <dimen name="card_corner_radius">16dp</dimen>
+    <dimen name="player_image_width">140dp</dimen>
+    <dimen name="player_image_height">130dp</dimen>
+    <dimen name="player_name_width">180dp</dimen>
+    <dimen name="player_name_size">20sp</dimen>
+    <dimen name="market_value_img_size">85dp</dimen>
+    <dimen name="market_value_club_name_width">235dp</dimen>
+    <dimen name="market_value_club_name_height">40dp</dimen>
 </resources>
