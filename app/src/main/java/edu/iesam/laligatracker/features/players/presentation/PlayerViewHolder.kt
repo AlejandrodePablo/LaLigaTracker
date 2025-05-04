@@ -17,8 +17,6 @@ class PlayerViewHolder(private val view: View) : RecyclerView.ViewHolder(view) {
             playerName.text = player.name
             playerImage.loadUrl(player.image)
             numberId.text = player.number
-            goals.text = "Goles: " + player.stats.amountGoals.toString()
-            assists.text = "Asistencias: " + player.stats.amountAssists.toString()
         }
     }
 }
