@@ -50,7 +50,6 @@
                         style="@style/textColor"
                         android:layout_width="@dimen/player_name_width"
                         android:layout_height="wrap_content"
-                        android:padding="@dimen/usual_padding"
                         android:textSize="@dimen/player_name_size"
                         tools:text="Player name" />
 
